@@ -6,10 +6,11 @@ class TaxiTests(TestCase):
         # tworzenie producenta
         manufacturer = Manufacturer.objects.create(name="Tesla")
 
-        # tworzenie kierowcy
+        # tworzenie kierowcy z wymaganym license_number
         driver = Driver.objects.create_user(
             username="john_doe",
-            password="ComplexPass123"
+            password="ComplexPass123",
+            license_number="ABC123"
         )
 
         # tworzenie samochodu i przypisanie kierowcy
